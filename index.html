@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>testimonial Slider</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <h1>Testimonials</h1>
+
+      <div class="container">
+        <div class="indicators">
+          <span class="btn active"></span>
+          <span class="btn"></span>
+          <span class="btn"></span>
+          <span class="btn"></span>
+        </div>
+        <div class="testimonial">
+          <div class="slide_row" id="slide">
+            <div class="slide_col">
+              <div class="text_user">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                  exercitationem itaque odio illum, distinctio consequatur
+                  delectus quis repellendus explicabo ducimus veritatis laborum,
+                  eius, aliquid rerum quam magni ex soluta temporibus?
+                </p>
+                <h3>John Doe</h3>
+                <p>Web Developer</p>
+              </div>
+              <div class="user_img">
+                <img src="./1.jpg" draggable="false" />
+              </div>
+            </div>
+            <div class="slide_col">
+              <div class="text_user">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                  exercitationem itaque odio illum, distinctio consequatur
+                  delectus quis repellendus explicabo ducimus veritatis laborum,
+                  eius, aliquid rerum quam magni ex soluta temporibus?
+                </p>
+                <h3>Jeffrey</h3>
+                <p>App Developer</p>
+              </div>
+              <div class="user_img">
+                <img src="./2.jpg" draggable="false" />
+              </div>
+            </div>
+            <div class="slide_col">
+              <div class="text_user">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                  exercitationem itaque odio illum, distinctio consequatur
+                  delectus quis repellendus explicabo ducimus veritatis laborum,
+                  eius, aliquid rerum quam magni ex soluta temporibus?
+                </p>
+                <h3>Yoana</h3>
+                <p>Python Expert</p>
+              </div>
+              <div class="user_img">
+                <img src="./3.avif" draggable="false" />
+              </div>
+            </div>
+            <div class="slide_col">
+              <div class="text_user">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                  exercitationem itaque odio illum, distinctio consequatur
+                  delectus quis repellendus explicabo ducimus veritatis laborum,
+                  eius, aliquid rerum quam magni ex soluta temporibus?
+                </p>
+                <h3>Mitra</h3>
+                <p>Fullstack Developer</p>
+              </div>
+              <div class="user_img">
+                <img src="./4.avif" draggable="false" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const btns = document.querySelectorAll(".btn");
+      const slide = document.getElementById("slide");
+
+      btns.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          document.querySelector(".btn.active").classList.remove("active");
+          btn.classList.add("active");
+          slide.style.transform = `translateX(-${index * 800}px)`;
+        });
+      });
+    </script>
+  </body>
+</html>
